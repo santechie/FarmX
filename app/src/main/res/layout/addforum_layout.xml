@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp"
+
+            android:gravity="center"
+            android:text="@string/post"
+            android:textColor="@color/green_farmx"
+            android:textSize="@dimen/headeline"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+
+                android:text="@string/forum_title"
+                android:textColor="@color/green_farmx"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/forum_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/backeditttext"
+
+                android:hint="@string/forum_title_here"
+                android:paddingHorizontal="10dp"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+
+                android:text="@string/category"
+                android:textColor="@color/green_farmx"
+                android:textStyle="bold" />
+
+
+            <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+                android:id="@+id/forum_category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_marginTop="5dp"
+                android:background="@drawable/backeditttext"
+
+                android:paddingStart="5dp"
+                android:prompt="@string/category"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+
+
+                android:text="@string/your_disc"
+                android:textColor="@color/green_farmx"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/forum_disc"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/backeditttext"
+
+                android:gravity="start|top"
+                android:hint="@string/enter_your_disc"
+                android:minHeight="100dp"
+                android:padding="15dp"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center|start">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center|start"
+                        android:text="@string/upload_image"
+                        android:textColor="@color/green_farmx"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight=".5"
+                    android:gravity="end">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/attachment"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/camera"
+                        android:backgroundTint="@color/green_farmx"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+
+                        android:src="@drawable/upload_green"
+
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/addpost"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/farmxgreen_outline"
+                android:backgroundTint="@color/green_farmx"
+                android:gravity="center"
+                android:text="@string/Submit"
+                android:textColor="@color/white"
+                app:button_cornerRadius="5dp"
+                app:button_duration="250"
+                app:button_scale="0.87" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

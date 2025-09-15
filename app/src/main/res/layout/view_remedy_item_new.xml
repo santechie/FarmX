@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/remedy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Remedy for pest"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/adminIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/remedy" />
+
+        <ImageView
+            android:id="@+id/adminIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_admin_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/remedy" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/admin">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Quantity" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/mat_black" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Cost" />
+
+                <TextView
+                    android:id="@+id/cost"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/mat_black" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Applied" />
+
+                <TextView
+                    android:id="@+id/applied"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/mat_black" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Recovered" />
+
+                <TextView
+                    android:id="@+id/recovered"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/mat_black" />
+            </TableRow>
+
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_weight="1"
+                android:ellipsize="start"
+                android:textColor="@color/mat_black" />
+
+        </TableLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RemedyImagesRv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table" />
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/buttonContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/imagesRv">-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/imgDownload"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight=".5"-->
+<!--                android:backgroundTint="#E9F4DE"-->
+<!--                app:iconTint="#4C8119"-->
+<!--                app:icon="@drawable/ic_image_icon"-->
+<!--                android:text="Image.jpg"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/fileDownload"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight=".5"-->
+<!--                android:backgroundTint="#E9F4DE"-->
+<!--                app:iconTint="#4C8119"-->
+<!--                app:icon="@drawable/ic_file_icon"-->
+<!--                android:text="File.pdf"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </LinearLayout>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

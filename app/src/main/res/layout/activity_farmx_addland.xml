@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/farmx_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="end"
+            android:text="@string/registerland"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/green_farmx" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/district"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:hint="@string/district"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/taluk"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/village"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+                        android:id="@+id/acer_count"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:prompt="@string/spinner_acre"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+                        android:id="@+id/soiltype"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:prompt="@string/soiltype"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/land_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:hint="@string/land_name"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/humidity"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/humidity"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/water_phval"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:hint="@string/ph"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/temperature_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/temperature"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1"
+
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/pollution"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:hint="@string/pollution"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/moisture"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@null"
+                        android:hint="@string/moisture"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textSize="15sp"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/maincrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/selectcrop"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    app:backgroundTint="@color/green_farmx" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/intercrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".85"
+                    android:focusable="false"
+                    android:hint="@string/search_intercrop"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    app:backgroundTint="@color/green_farmx" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+                        android:id="@+id/anual_revenue"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:prompt="@string/spinner_annual"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+                        android:id="@+id/irrigation_type"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:prompt="@string/spinner_irrigation"
+                        app:backgroundTint="@color/green_farmx" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".1dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/green_farmx" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/organicfarming"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/organic_farmer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:id="@+id/organic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+
+                    android:text="@string/organicfarmer"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/organicswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/organic_view"
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/ownership"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/ownerwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="Single "
+                        app:textOn="Joint " />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/govtschemes"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/schemeswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sceme_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <co.lujun.androidtagview.TagContainerLayout
+                    android:id="@+id/scheme_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    app:container_enable_drag="false"
+                    app:horizontal_interval="10dp"
+                    app:tag_clickable="true"
+                    app:tag_theme="pure_teal"
+                    app:vertical_interval="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/scheme_name"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight=".85"
+                        android:background="@drawable/backeditttext"
+                        android:hint="@string/scheme"
+                        android:paddingStart="5dp"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".15"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/add_scheme"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/add_button" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/livestocks"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/cattleswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/soilhealthcard"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/soilswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/exportinterest"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/exportwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".7"
+                    android:text="@string/import_to_marketplace"
+                    android:textColor="@color/green_farmx"
+                    android:textSize="17sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:gravity="center">
+
+                    <com.github.angads25.toggle.widget.LabeledSwitch
+                        android:id="@+id/importmarket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        app:colorBorder="@color/green_farmx"
+                        app:colorOn="@color/green_farmx"
+                        app:on="false"
+                        app:textOff="No"
+                        app:textOn="Yes" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/green_farmx" />
+
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/farmxgreen_outline"
+                android:backgroundTint="@color/green_farmx"
+                android:gravity="center"
+                android:text="@string/Submit"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

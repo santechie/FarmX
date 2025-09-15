@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#121F3F</color>
+    <color name="colorPrimaryDark">#437C09</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="app_colour_green">#121F3F</color>
+    <color name="orange">@android:color/holo_orange_dark</color>
+    <color name="subtab">#fb6b4c</color>
+    <color name="backround_buysell">#dff0cc</color>
+
+    <color name="deep_orange_400">#FF7043</color>
+    <color name="actionbar_colour">#e7f1f2</color>
+    <color name="application_letters">#3b452d</color>
+    <color name="headlines_colour">#996633</color>
+    <color name="subheadlines_colour">#3b452d</color>
+    <color name="light_blue">#CFD1D6</color>
+    <color name="colorAccentRed">#ff0000</color>
+    <color name="bank_details">#fff9f9</color>
+
+
+    <color name="logineditcolour">#4b5a69</color>
+    <color name="overlay_dark_60">#99000000</color>
+
+    <color name="overlay_light_40">#66FFFFFF</color>
+    <color name="overlay_light_61">#FF797A7C</color>
+    <color name="overlay_light_90">#E6FFFFFF</color>
+
+    <color name="light_blue_600">#039BE5</color>
+    <color name="orange_delete">#e3370c</color>
+
+
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_90">#263238</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="mat_black">#212121</color>
+    <color name="mailheader">#2d4676</color>
+    <color name="transparent">#80000000</color>
+    <color name="green_farmx">#5dae0b</color>
+    <color name="green_farmx_trans">#445dae0b</color>
+    <color name="light_hash">#DCDCDC</color>
+    <color name="light_hash50">#C8C7C7</color>
+
+    <color name="bright_pink">#50b332</color>
+    <color name="red">#ec561b</color>
+    <color name="spring_green">#dddf00</color>
+    <color name="cyan">#23cbe5</color>
+    <color name="azure">#64e571</color>
+    <color name="blue">#ff9655</color>
+    <color name="violet">#2d4676</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="mat_white">#EEEEEE</color>
+    <color name="mat_red">#F44336</color>
+    <color name="light_green">#E6F8D8</color>
+    <color name="dark_green">#40810A</color>
+
+    <color name="colorAccentAnother">#FFD740</color>
+    <color name="image_black">#4D4D4D</color>
+    <color name="cardColor">#F5F5F5</color>
+    <color name="first_black">#202020</color>
+    <color name="second_black">#747474</color>
+    <color name="third_black">#9D9D9D</color>
+    <color name="forth_black">#E2E2E2</color>
+    <color name="green">#B2FF59</color>
+    <color name="yellow_status">#FFD740</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="backColor">#F5F5F5</color>
+    <color name="linkColor">#2f6699</color>
+    <color name="underline_color">#E2E2E2</color>
+
+    <color name="bar_green">#8BC34A</color>
+    <color name="bar_red">#ED2939</color>
+
+</resources>

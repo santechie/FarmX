@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ascentya.AsgriV2"
+    tools:ignore="GoogleAppIndexingWarning">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <application
+        android:name="com.ascentya.AsgriV2.Utils.MyApplication"
+        android:allowBackup="false"
+        android:font="@font/poppins_regular"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_clear"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".UpgradeDialog"
+            android:exported="false" />
+        <activity
+            android:name=".ExpiredDialog"
+            android:exported="false" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.ReportSuggestionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp"
+            tools:ignore="Instantiatable" />
+        <activity
+
+            android:name="com.ascentya.AsgriV2.my_farm.activities.PartReportActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.ReportDetailActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.ReportPestDiseaseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.ResetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.VerifyOtpActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.ForgotPasswordActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.ActivitiesCalendarActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.AddCropActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.CropsHistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.LandMapActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.PestDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.LandMarkActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.staff.activities.StaffPermissionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.staff.activities.InviteStaffActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.staff.activities.ManageStaffActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.LandActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.DeviceDataActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.MyLandsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.PestDiseaseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.FinancesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.ActivitiesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.ZonesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.CropActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.MyCropsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_farm.activities.MyFarmActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApp" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.beta.NewFeaturesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.intro.IntroActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_land.activities.LandActivitiesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.utility.activity.soil_test.WaterTestResultActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <receiver
+            android:name="com.ascentya.AsgriV2.Utils.bug_report.ReportUpdater"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.my_land.activities.MyLandActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.utility.activity.soil_test.SoilTestResultActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.utility.activity.soil_test.TestProcedureActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.utility.activity.soil_test.TestLabsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.utility.activity.soil_test.TestRequestsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.utility.activity.UtilityActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.DeviceDataChartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.DeviceDataActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.StockDetailsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.OrderDetailsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.FarmX_MyStockActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.OrderHistoryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.OrderConfirmationActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.AddressActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.AddressListActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.CheckoutActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.CartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.ChooseItemsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+        <activity
+            android:name="com.ascentya.AsgriV2.e_market.activities.EMarketActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApp" />
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.CardPaymentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.MyProfile"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Scheme_Details"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.SchemeBanks"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Scheme_Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.my_lands.Cropwise_Zones"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.my_lands.ReportHistory_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Edit_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.Track_Order"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.Detailed_Product"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.Choose_Payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.My_Address"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Add_HelperActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Activity_Farmx_Modified"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Random_Verification"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Forum.Search_Forum"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Farmx_VluRegister"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.Status_Screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Finance_Dummy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.Select_Address"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.MyCart"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Expired_Page"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.buysell.Buy_Sell"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Forum.Detailed_Forum"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.my_lands.MyLand_Slaves"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.my_lands.Myland_Master"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.my_lands.My_Lands"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Farmx_Addland"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Farmx_Addland_New"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.FarmX_Warehouse"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/maps_api" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Farmx_Cattle"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.postharvest_diseas.PestsDisease_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.postharvest_diseas.SeedQuality_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.farmx.postharvest_diseas.Maindashboard_phd"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Farmx_Myfarm"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Farmx_Mycro"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ascentya.AsgriV2.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Equipment_Register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Warehouse_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Institute_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Procurer_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Insurance_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Farmx_ResetPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Farmx_Forgot_Password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Bank_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Farmer_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Formx_Login_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+
+        </activity>
+
+        <activity
+            android:name="com.ascentya.AsgriV2.login_activities.Farmx_SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Forum_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.ascentya.AsgriV2.Activitys.Payment_Activity" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Activity_Lifecycle"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Crop_Checker"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Test_Ack"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_crop"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Mycrops_Main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_crop"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Market_News"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <receiver
+            android:name="com.ascentya.AsgriV2.Utils.MyAlarm"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Farmx_Service"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.HomeScreen_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.Main_Dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.ascentya.AsgriV2.Activitys.OnBoard_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+    </application>
+
+</manifest>

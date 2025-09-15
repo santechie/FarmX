@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/green_radius" />
+    <item
+        android:bottom="15px"
+        android:drawable="@drawable/ic_baseline_camera_24"
+        android:gravity="center"
+        android:left="15px"
+        android:right="15px"
+
+        android:top="15px" />
+</layer-list>

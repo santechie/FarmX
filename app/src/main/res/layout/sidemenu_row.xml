@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="10">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:id="@+id/icon_bg"
+                android:layout_width="25dp"
+                android:background="@color/actionbar_colour"
+                android:layout_height="25dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="20dp"
+                   android:backgroundTint="@color/white"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:layout_marginStart="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/desc"
+
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/actionbar_colour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/actionbar_colour"
+        android:layout_height=".1dp"/>
+
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="0dp"
+    android:paddingBottom="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/mat_black"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minLines="2"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image"
+                app:layout_constraintTop_toBottomOf="@id/date"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/temperatureIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/date"
+                app:layout_constraintTop_toBottomOf="@id/summary"
+                android:src="@drawable/ic_temperature"/>
+
+            <LinearLayout
+                android:id="@+id/tempHighCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/temperatureIcon"
+                app:layout_constraintStart_toEndOf="@id/temperatureIcon">
+
+                <TextView
+                    android:id="@+id/tempHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+                <ImageView
+                    android:id="@+id/temperatureHighIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="@id/date"
+                    app:layout_constraintTop_toBottomOf="@id/summary"
+                    android:src="@drawable/high"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tempLowCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/temperatureIcon"
+                app:layout_constraintStart_toEndOf="@id/tempHighCont">
+
+                <TextView
+                    android:id="@+id/tempLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+                <ImageView
+                    android:id="@+id/temperatureLowIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="@id/date"
+                    app:layout_constraintTop_toBottomOf="@id/summary"
+                    android:src="@drawable/low"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/humidityIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/date"
+                app:layout_constraintTop_toBottomOf="@id/temperatureIcon"
+                android:src="@drawable/ic_humidity"/>
+
+            <LinearLayout
+                android:id="@+id/humidityCont"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/humidityIcon"
+                app:layout_constraintStart_toEndOf="@id/humidityIcon">
+
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/windIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/date"
+                app:layout_constraintTop_toBottomOf="@id/humidityIcon"
+                android:src="@drawable/ic_wind"/>
+
+            <LinearLayout
+                android:id="@+id/windCont"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/windIcon"
+                app:layout_constraintStart_toEndOf="@id/windIcon">
+
+                <TextView
+                    android:id="@+id/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/windDirCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/windIcon"
+                app:layout_constraintStart_toEndOf="@id/windCont">
+
+                <ImageView
+                    android:id="@+id/windDirIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="@id/date"
+                    app:layout_constraintTop_toBottomOf="@id/summary"
+                    android:src="@drawable/ic_direction"/>
+
+                <TextView
+                    android:id="@+id/windDir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/rainIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/date"
+                app:layout_constraintTop_toBottomOf="@id/windIcon"
+                android:src="@drawable/ic_rainfall"/>
+
+            <LinearLayout
+                android:id="@+id/rainHighCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/rainIcon"
+                app:layout_constraintStart_toEndOf="@id/rainIcon">
+
+                <TextView
+                    android:id="@+id/rainHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+                <ImageView
+                    android:id="@+id/rainHighIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="@id/date"
+                    app:layout_constraintTop_toBottomOf="@id/summary"
+                    android:src="@drawable/high"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rainLowCont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="@id/rainIcon"
+                app:layout_constraintStart_toEndOf="@id/rainHighCont">
+
+                <TextView
+                    android:id="@+id/rainLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"/>
+
+                <ImageView
+                    android:id="@+id/rainLowIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="@id/date"
+                    app:layout_constraintTop_toBottomOf="@id/summary"
+                    android:src="@drawable/low"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

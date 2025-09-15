@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/landing_pagebackround_new"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center|bottom">
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_weight="2"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:background="@drawable/symbol_a" />
+
+                <TextView
+                    android:id="@+id/a_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+
+                    android:gravity="center"
+                    android:text="A"
+                    android:textColor="@color/app_colour_green"
+                    android:textSize="75dp" />
+
+                <TextView
+                    android:id="@+id/s_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="-13dp"
+                    android:layout_marginLeft="-15dp"
+
+                    android:text="S"
+                    android:textColor="@color/app_colour_green"
+                    android:textSize="62dp" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/g_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-13dp"
+                android:layout_marginLeft="-15dp"
+
+                android:text=" G"
+                android:textColor="@color/app_colour_green"
+                android:textSize="62dp" />
+
+            <TextView
+                android:id="@+id/r_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-13dp"
+                android:layout_marginLeft="-15dp"
+
+                android:text=" R"
+                android:textColor="@color/app_colour_green"
+                android:textSize="62dp" />
+
+            <TextView
+                android:id="@+id/i_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-13dp"
+                android:layout_marginLeft="-15dp"
+
+                android:text=" I"
+                android:textColor="@color/app_colour_green"
+                android:textSize="62dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center|bottom"
+        android:layout_weight="5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Loading..."
+            android:gravity="center"
+            android:id="@+id/loading"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

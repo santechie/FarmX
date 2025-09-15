@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/light_blue"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
+
+        android:gravity="center"
+        android:text="@string/fieldlisting"
+        android:textColor="@color/headlines_colour"
+        android:textSize="@dimen/headeline"
+        android:textStyle="bold"
+
+        />
+
+    <include
+        layout="@layout/nodata_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mycultivation_recycler"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/premium_layout"
+        android:layout_width="match_parent"
+android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/premium"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/button_curved"
+
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/upgrade"
+            android:textColor="@color/white"
+            app:button_cornerRadius="5dp"
+            app:button_duration="250"
+            app:button_scale="0.87" />
+
+
+    </LinearLayout>
+</LinearLayout>

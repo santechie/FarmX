@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/data"
+        android:title="Data"
+        android:icon="@drawable/ic_data"/>
+    <item
+        android:id="@+id/activities"
+        android:title="Activities"
+        android:icon="@drawable/ic_activity"/>
+    <item
+        android:id="@+id/finance"
+        android:title="Finance"
+        android:icon="@drawable/ic_add_income"/>
+
+    <item
+        android:id="@+id/pest"
+        android:title="Pest"
+        android:icon="@drawable/ic_pest"/>
+
+    <item
+        android:id="@+id/device_data"
+        android:title="Devices"
+        android:icon="@drawable/ic_my_devices"/>
+
+</menu>

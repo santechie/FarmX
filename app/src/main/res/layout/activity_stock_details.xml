@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".e_market.activities.StockDetailsActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_max="80dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/categoryName"
+        app:layout_constraintBottom_toBottomOf="@id/itemName"
+        android:tint="@color/green_farmx"
+        android:src="@drawable/activity_icon"/>
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="14sp"
+        android:text="Category"/>
+
+    <TextView
+        android:id="@+id/itemTypeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/categoryName"
+        android:textSize="22sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/green_farmx"
+        android:text="Item Type"/>
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/itemTypeName"
+        android:textSize="16sp"
+        android:text="Item"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerVertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <TextView
+        android:id="@+id/organic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:background="@drawable/outline"
+        app:layout_constraintStart_toStartOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="@id/itemName"
+        android:textColor="@color/green_farmx"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Organic"/>
+    
+    <View
+        android:id="@+id/border1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@id/organic"
+        app:layout_constraintStart_toStartOf="@id/image"
+        app:layout_constraintEnd_toEndOf="@id/itemName"/>
+
+
+    <TextView
+        android:id="@+id/quantityHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/border1"
+        app:layout_constraintEnd_toEndOf="@id/centerVertical"
+        android:textColor="@color/green_farmx"
+        android:textSize="16sp"
+        android:text="Quantity"/>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/quantityHead"
+        app:layout_constraintEnd_toEndOf="@id/quantityHead"
+        app:layout_constraintTop_toBottomOf="@id/quantityHead"
+        android:textSize="22sp"
+        android:text="100 TON"/>
+
+    <TextView
+        android:id="@+id/priceHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="@id/centerVertical"
+        app:layout_constraintTop_toBottomOf="@id/border1"
+        app:layout_constraintEnd_toEndOf="@id/border1"
+        android:textColor="@color/green_farmx"
+        android:textSize="16sp"
+        android:text="Price"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/priceHead"
+        app:layout_constraintEnd_toEndOf="@id/priceHead"
+        app:layout_constraintTop_toBottomOf="@id/quantityHead"
+        android:textSize="22sp"
+        android:text="Rs. 100000"/>
+
+    <TextView
+        android:id="@+id/dateHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="0dp"
+        app:layout_constraintStart_toStartOf="@id/quantityHead"
+        app:layout_constraintTop_toBottomOf="@id/quantity"
+        app:layout_constraintEnd_toEndOf="@id/quantityHead"
+        android:textColor="@color/green_farmx"
+        android:textSize="16sp"
+        android:text="Harvest Date"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/quantityHead"
+        app:layout_constraintEnd_toEndOf="@id/priceHead"
+        app:layout_constraintTop_toBottomOf="@id/dateHead"
+        android:textSize="22sp"
+        android:text="16/11/2021 - 30/11/2021"/>
+
+    <TextView
+        android:id="@+id/placeHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="0dp"
+        app:layout_constraintStart_toStartOf="@id/quantityHead"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_constraintEnd_toEndOf="@id/quantityHead"
+        android:textColor="@color/green_farmx"
+        android:textSize="16sp"
+        android:text="Place"/>
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@id/quantityHead"
+        app:layout_constraintEnd_toEndOf="@id/priceHead"
+        app:layout_constraintTop_toBottomOf="@id/placeHead"
+        android:textSize="22sp"
+        android:text="FarmX\nVR Chennai\nAnna nagar\nChennai"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/minusFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/place"
+        android:layout_marginTop="40dp"
+        app:backgroundTint="@color/green_farmx"
+        app:tint="@color/white"
+        android:src="@drawable/ic_minus_1"
+        app:fabSize="mini"/>
+
+    <EditText
+        android:id="@+id/quantityInput"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:minEms="4"
+        app:layout_constraintStart_toEndOf="@id/minusFab"
+        app:layout_constraintTop_toTopOf="@id/minusFab"
+        app:layout_constraintBottom_toBottomOf="@id/minusFab"
+        android:layout_marginStart="20dp"
+        android:textAlignment="center"
+        android:hint="0"
+        android:textSize="24sp"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:background="@drawable/outline"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/plusFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/quantityInput"
+        app:layout_constraintTop_toBottomOf="@id/place"
+        android:layout_marginTop="40dp"
+        app:tint="@color/white"
+        app:backgroundTint="@color/green_farmx"
+        android:src="@drawable/ic_plus_white_24dp"
+        app:fabSize="mini"/>
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/minusFab"
+        app:layout_constraintBottom_toBottomOf="@id/minusFab"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_delete_sweep_24"
+        app:tint="@color/mat_red"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/minusFab"
+        app:layout_constraintEnd_toEndOf="@id/plusFab"
+        app:layout_constraintTop_toBottomOf="@id/quantityInput">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/kgChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="KG"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tonChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="TON"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/book"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        app:cornerRadius="20sp"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Book"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

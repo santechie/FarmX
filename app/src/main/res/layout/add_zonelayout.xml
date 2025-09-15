@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/dialog_bg"
+    android:nestedScrollingEnabled="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+
+                android:gravity="center"
+                android:textColor="@color/subheadlines_colour"
+                android:textSize="19sp"
+                android:fontFamily="@font/poppins_semibold" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_close_black_24dp"
+                android:tint="@color/orange" />
+
+
+        </RelativeLayout>
+
+        <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+            android:id="@+id/crop_select"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15sp"
+            android:background="@drawable/backeditttext"
+
+            android:paddingStart="5dp"
+            android:prompt="@string/select_crop"
+            android:spinnerMode="dropdown"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/rows"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginEnd="15sp"
+            android:background="@drawable/backeditttext"
+
+            android:hint="@string/no_of_zones"
+            android:inputType="number"
+            android:maxLength="2"
+            android:paddingStart="5dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/farmxgreen_button"
+            android:text="@string/Submit"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:background="@color/light_blue"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
+
+        android:gravity="center"
+        android:text="@string/myanimals"
+        android:textColor="@color/headlines_colour"
+        android:textSize="@dimen/headeline"
+        android:fontFamily="@font/poppins_semibold"
+
+        />
+
+    <include
+        android:layout_width="match_parent"
+        layout="@layout/nodata_layout"
+        android:layout_height="match_parent">
+
+    </include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/myrear_recycler"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/premium_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/premium"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/button_curved"
+
+            android:gravity="center"
+            android:text="@string/upgrade"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/white"
+            app:button_cornerRadius="5dp"
+
+            app:button_duration="250"
+            app:button_scale="0.87" />
+
+
+    </LinearLayout>
+</LinearLayout>

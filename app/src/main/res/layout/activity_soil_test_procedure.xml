@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mat_white"
+    tools:context=".utility.activity.soil_test.TestProcedureActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/submit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/send_your_soil_sample_to_farmx"
+                android:textColor="@color/green_farmx"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_curvedbutton"
+                android:padding="12dp"
+                android:text="@string/you_will_receive_the_test_report_in_7_days_on_your_app_once_we_receive_the_sample"
+                android:textColor="@color/grey_90"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageView
+                android:id="@+id/infoIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/hint"
+                android:src="@drawable/ic_soil_icon"/>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/infoIcon"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintTop_toTopOf="@id/infoIcon"
+                android:textColor="@color/grey_90"
+                android:text="@string/please_follow_the_below_procedure_to_send_the_soil_sample_to_our_lab"/>
+
+            <TextView
+                android:id="@+id/titleTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="15dp"
+                android:text="@string/collect_soil_sample_from_your_farm"
+                android:textColor="@color/green_farmx"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="@id/titleTwo"
+                app:layout_constraintTop_toBottomOf="@id/titleTwo"
+                app:layout_constraintEnd_toStartOf="@id/video"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                app:cornerRadius="20dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:text="@string/image"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/image"
+                app:layout_constraintTop_toBottomOf="@id/titleTwo"
+                app:layout_constraintEnd_toEndOf="@id/titleTwo"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                app:cornerRadius="20dp"
+                android:text="@string/video"/>
+
+            <TextView
+                android:id="@+id/landTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintStart_toStartOf="@id/title"
+                android:textColor="@color/green_farmx"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/land"/>
+
+            <TextView
+                android:id="@+id/landSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_curvedbutton"
+                android:padding="12dp"
+                android:text="@string/select_land"
+                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                android:textColor="@color/grey_90"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/landTitle" />
+
+            <TextView
+                android:id="@+id/personalDetailsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/landSpinner"
+                app:layout_constraintStart_toStartOf="@id/title"
+                android:textColor="@color/green_farmx"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/personal_details"/>
+
+            <TextView
+                android:id="@+id/nameTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/personalDetailsTitle"
+                android:text="@string/name"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/white_curvedbutton"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                android:hint="@string/name"
+                android:textColor="@color/mat_black"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/nameTitle"/>
+
+            <TextView
+                android:id="@+id/mobileTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:text="@string/mobile_number"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/mobileNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/white_curvedbutton"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:hint="@string/mobile_number"
+                android:textColor="@color/mat_black"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/mobileTitle"/>
+
+            <TextView
+                android:id="@+id/ticketTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/mobileNumber"
+                android:text="@string/ticket_number"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/ticketNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/white_curvedbutton"
+                android:layout_marginTop="2dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                android:textColor="@color/mat_black"
+                android:clickable="false"
+                android:focusable="false"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/ticketTitle"/>
+
+            <TextView
+                android:id="@+id/addressTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/ticketNumber"
+                android:text="@string/address"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:padding="12dp"
+                android:background="@drawable/white_curvedbutton"
+                android:layout_marginTop="2dp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+                android:hint=""
+                android:textColor="@color/mat_black"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/addressTitle"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/scrollView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/Submit"
+        app:backgroundTint="@color/green_farmx"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

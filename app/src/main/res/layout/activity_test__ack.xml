@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp"
+
+            android:gravity="center"
+            android:text="@string/addmembers"
+            android:textColor="@color/green_farmx"
+            android:textSize="@dimen/headeline" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/member_name"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_height="35dp"
+                android:textSize="15sp"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+
+                android:hint="@string/membername" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".2dp"
+                android:background="@color/green_farmx" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <com.ascentya.AsgriV2.Utils.NoDefaultSpinner
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:prompt="@string/gender" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".2dp"
+                    android:background="@color/green_farmx" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_weight=".5">
+
+                <EditText
+                    android:id="@+id/member_age"
+                    android:background="@null"
+                    android:textSize="15sp"
+                    android:imeOptions="actionNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="@string/age"
+                    android:maxLength="2"
+                    android:inputType="number" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".2dp"
+                    android:background="@color/green_farmx" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <EditText
+                android:id="@+id/relation"
+                android:background="@null"
+                android:textSize="15sp"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="@string/aadhaar_number"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".2dp"
+                android:background="@color/green_farmx" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/addmember"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/farmxgreen_outline"
+                android:backgroundTint="@color/green_farmx"
+
+                android:gravity="center"
+                android:text="@string/addmember"
+                android:textColor="@color/white"
+                app:button_cornerRadius="5dp"
+                app:button_duration="250"
+
+                app:button_scale="0.87" />
+
+
+            <TextView
+                android:id="@+id/memberslisting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

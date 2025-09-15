@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@android:style/TextAppearance.DeviceDefault.Small"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fillViewport="true"
+
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/search_layout_header"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent" />
+
+
+            <LinearLayout
+                android:id="@+id/basic_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginBottom="15sp"
+
+                    android:gravity="center"
+                    android:text="@string/basic_info"
+                    android:textColor="@color/headlines_colour"
+                    android:textSize="@dimen/headeline"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+
+                    android:text="@string/commonname"
+                    android:textColor="@color/subheadlines_colour"
+
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/backeditttext"
+
+                    android:gravity="center|start"
+                    android:minHeight="35dp"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/loading"
+                    android:textColor="@color/application_letters"
+                    android:textSize="@dimen/disc" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:text="@string/scientificname"
+                    android:textColor="@color/subheadlines_colour"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/science_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/backeditttext"
+
+                    android:gravity="center|start"
+                    android:minHeight="35dp"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/loading"
+                    android:textColor="@color/application_letters"
+                    android:textSize="@dimen/disc" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:text="@string/family"
+
+                    android:textColor="@color/subheadlines_colour"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/backeditttext"
+
+                    android:gravity="center|start"
+                    android:minHeight="35dp"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/loading"
+                    android:textColor="@color/application_letters"
+                    android:textSize="@dimen/disc" />
+
+                <LinearLayout
+                    android:id="@+id/root_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:text="@string/description"
+                        android:textColor="@color/subheadlines_colour"
+
+                        android:textSize="@dimen/title"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/disc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/backeditttext"
+                        android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+
+                        android:gravity="center|start"
+                        android:maxLines="1"
+                        android:minHeight="35dp"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:text="@string/loading"
+                        android:textColor="@color/application_letters"
+                        android:textSize="@dimen/disc" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/edit_movies_fab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/farmx_logo"
+        app:backgroundTint="@color/white"
+        app:layout_anchor="@id/nested_scroll_view"
+        android:clipToPadding="false"
+        app:layout_anchorGravity="bottom|end">
+
+        <com.nambimobile.widgets.efab.Overlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:efab_closingAnticipateTension="0"
+            app:efab_icon="@drawable/ic_plus_white_24dp"
+            app:efab_iconAnimationRotationDeg="-135"
+            app:efab_closingAnimationDurationMs="250"
+            app:efab_openingAnimationDurationMs="250" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/crop_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/white"
+            app:fab_icon="@drawable/crop"
+            app:label_text="Select Crops" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/crop_cycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="@color/white"
+            app:fab_icon="@drawable/recycling"
+            app:label_text="Crop Lifecycle" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

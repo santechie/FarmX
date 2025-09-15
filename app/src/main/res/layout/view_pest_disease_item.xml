@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginBottom="15dp"
+    android:background="@color/green_farmx">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/nameTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/outline"
+            android:hint="Type"/>
+
+        <ImageView
+            android:id="@+id/pestIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/type"
+            android:src="@drawable/pest_icon"
+            app:tint="@color/orange" />
+
+        <TextView
+            android:id="@+id/nameTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@id/pestIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pestIcon"
+            android:textSize="12sp"
+            android:text="@string/cause"/>
+
+        <TextView
+            android:id="@+id/pestName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/nameTitle"
+            app:layout_constraintEnd_toEndOf="@id/nameTitle"
+            app:layout_constraintTop_toBottomOf="@id/nameTitle"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/diseaseTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/nameTitle"
+            app:layout_constraintEnd_toEndOf="@id/nameTitle"
+            app:layout_constraintTop_toBottomOf="@id/pestName"
+            android:textSize="12sp"
+            android:text="@string/affected_cause"/>
+
+        <TextView
+            android:id="@+id/pestDisease"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/nameTitle"
+            app:layout_constraintEnd_toEndOf="@id/nameTitle"
+            app:layout_constraintTop_toBottomOf="@id/diseaseTitle"
+            android:text=""
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/remedyIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/remedyTitle"
+            android:src="@drawable/remedy"
+            app:tint="@color/green_farmx" />
+
+        <TextView
+            android:id="@+id/remedyTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/nameTitle"
+            app:layout_constraintEnd_toEndOf="@id/nameTitle"
+            app:layout_constraintTop_toBottomOf="@id/pestDisease"
+            android:textSize="12sp"
+            android:text="@string/remedy"/>
+
+        <TextView
+            android:id="@+id/remedy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/nameTitle"
+            app:layout_constraintEnd_toEndOf="@id/nameTitle"
+            app:layout_constraintTop_toBottomOf="@id/remedyTitle"
+            android:text=""
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

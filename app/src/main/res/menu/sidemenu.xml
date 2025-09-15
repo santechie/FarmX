@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_network"
+        android:icon="@drawable/info"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/navigation_utility"
+        android:icon="@drawable/ic_utility"
+        android:title="@string/utility"/>
+
+    <item
+        android:id="@+id/navigation_job"
+        android:icon="@drawable/ic_baseline_notifications_active_24"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/notification" />
+
+    <item
+        android:id="@+id/manage_staff"
+        android:icon="@drawable/profile"
+        android:visible="false"
+        android:iconTint="@color/app_colour_green"
+        android:title="Manage Staff"/>
+
+
+    <item
+        android:id="@+id/navigation_buy"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:visible="false"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/setting" />
+
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/logout"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/logout" />
+</menu>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp"
+
+            android:gravity="center"
+            android:text="@string/editcrop"
+            android:textColor="@color/headlines_colour"
+            android:textSize="@dimen/headeline"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/selectcrop"
+            android:textColor="@color/subheadlines_colour"
+
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/selectcrop"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/selectland"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Spinner
+                android:id="@+id/land"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:minHeight="35dp"
+                android:background="@drawable/backeditttext"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:spinnerMode="dropdown"
+                android:elevation="0dp"
+                android:textColor="@color/logineditcolour"
+                android:textColorHint="@color/logineditcolour"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_keyboard_arrow_down_black_24dp" />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/selectmember"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <Spinner
+                android:id="@+id/member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:elevation="0dp"
+                android:minHeight="35dp"
+                android:background="@drawable/backeditttext"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+
+                android:textColor="@color/logineditcolour"
+                android:textColorHint="@color/logineditcolour"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_keyboard_arrow_down_black_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/plougheddate"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/plougheddate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:hint="@string/selectdate"
+            android:padding="5dp"
+            android:focusable="false"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/wateravailability"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/wateravailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/wateravailability"
+            android:imeOptions="actionDone"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/last_irrigated_date"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/last_irrigated_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:focusable="false"
+            android:paddingStart="10dp"
+            android:hint="@string/selectdate"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/next_irrigated_date"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/next_irrigated_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+            android:focusable="false"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/selectdate"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/last_fertilized_date"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/last_fertilized_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/selectdate"
+            android:focusable="false"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/next_fertilized_date"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/next_fertilized_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/selectdate"
+            android:focusable="false"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/fertilizer_used"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/fertilizer_used"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:hint="@string/fertilizer_used"
+            android:imeOptions="actionNext"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/chemicals_used"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/chemicals_used"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/chemicals_used"
+            android:imeOptions="actionDone"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/last_chemical_spray_date"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/last_chemical_spray_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+            android:focusable="false"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/selectdate"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/next_chemical_spray_date"
+            android:textColor="@color/subheadlines_colour"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/next_chemical_spray_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backeditttext"
+            android:focusable="false"
+
+            android:gravity="center|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:hint="@string/selectdate"
+            android:paddingStart="10dp"
+            android:textColor="@color/application_letters"
+            android:textSize="@dimen/disc" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:text="@string/remainder"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/remainder"
+            android:paddingStart="10dp"
+            android:textSize="@dimen/title"
+
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:gravity="center">
+
+
+            <com.skydoves.elasticviews.ElasticButton
+                android:id="@+id/addcrop"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_margin="20dp"
+                android:background="@color/app_colour_green"
+                android:gravity="center"
+                app:button_cornerRadius="5dp"
+                app:button_duration="250"
+                app:button_scale="0.87"
+                android:text="@string/update"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

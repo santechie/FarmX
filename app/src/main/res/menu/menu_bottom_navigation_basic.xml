@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_network"
+        android:icon="@drawable/info"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/Info" />
+
+    <item
+        android:id="@+id/navigation_job"
+        android:iconTint="@color/app_colour_green"
+        android:icon="@drawable/cultivation"
+        android:title="@string/Cultivation" />
+
+    <item
+        android:id="@+id/navigation_recruit"
+        android:icon="@drawable/focus"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/Pests" />
+
+    <item
+        android:id="@+id/navigation_buy"
+        android:iconTint="@color/app_colour_green"
+        android:icon="@drawable/disease"
+        android:title="@string/Diseases" />
+
+    <item
+        android:id="@+id/navigation_sell"
+        android:iconTint="@color/app_colour_green"
+        android:icon="@drawable/referances"
+        android:title="@string/PHD" />
+
+
+
+</menu>

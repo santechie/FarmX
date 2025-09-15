@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".buysell.Status_Screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_weight="2.5">
+
+        <ImageView
+            android:layout_width="200dp"
+
+            android:layout_height="200dp"
+            android:background="@drawable/status_shop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:gravity="center"
+            android:text="@string/thank_you_for_your_order"
+            android:textColor="@color/green_farmx"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+
+        android:gravity="center|top">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:gravity="center"
+            android:text="@string/we_are_currently_processing_your_order"
+            android:textColor="@color/grey_90"
+
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:gravity="center"
+            android:text="@string/your_order_will_arrive_on_or_before"
+            android:textColor="@color/grey_40"
+
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+
+            android:gravity="center"
+            android:text="10 June 2021."
+            android:textColor="@color/black"
+
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15sp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/goback"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_curved"
+
+            android:text="@string/go_to_home_page"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</LinearLayout>

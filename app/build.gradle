@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+def support_version = "27.0.2"
+def room_version = "1.1.1"
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "com.ascentya.AsgriV2"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 2
+        versionName "2.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation "com.google.android.material:material:1.2.1"
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    implementation 'com.qintong:insLoadingAnimation:1.1.0'
+
+    implementation 'me.relex:circleindicator:2.1.4'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.squareup:otto:1.3.5'
+    implementation 'com.github.smhdk:KM-Popup-Image-Slider:v1.0.1'
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    testImplementation "android.arch.persistence.room:testing:$room_version"
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.github.mreram:showcaseview:1.1'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.karumi:dexter:5.0.0'
+
+    implementation 'org.apache.commons:commons-text:1.6'
+
+    implementation 'com.zagori:mediaviewer:1.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    implementation "com.github.skydoves:elasticviews:2.0.7"
+    implementation 'com.takisoft.datetimepicker:datetimepicker:1.0.0'
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+    implementation 'com.uniquestudio:checkbox:1.0.10'
+//    implementation 'com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT'
+//    implementation 'com.github.pchmn:MaterialChipsInput:1.0.8'
+//    implementation('com.thomashaertel:multispinner:0.1.0@aar') {
+//    }
+
+//    implementation 'io.apptik.widget:multiselectspinner:1.0.12'
+    implementation 'com.github.abumoallim:Android-Multi-Select-Dialog:v1.9'
+
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    implementation 'com.github.morochorochadarwin:horizontalscrollmenu:2.0.1'
+    implementation 'com.nambimobile.widgets:expandable-fab:1.0.1'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.github.jrvansuita:PickImage:2.5.4'
+
+    implementation 'com.ernestoyaquello.stepperform:vertical-stepper-form:2.4.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.github.pcyfox:PieChartView:v1.1.3'
+
+    implementation 'io.github.rockerhieu:emojicon:1.4.2'
+
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.github.mahimrocky:TagView:1.0.3'
+    implementation 'com.chaos.view:pinview:1.4.4'
+    implementation 'com.xwray:passwordview:1.0'
+
+
+    implementation 'com.github.angads25:toggle:1.1.0'
+    implementation 'co.lujun:androidtagview:1.1.7'
+//    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.30'
+    implementation 'nl.bryanderidder:themed-toggle-button-group:1.3.4'
+
+    implementation 'com.stripe:stripe-android:18.0.0'
+
+    implementation 'id.zelory:compressor:2.1.1'
+
+    implementation 'com.github.Gruzer:simple-gauge-android:0.3.0'
+
+    //implementation 'com.tbuonomo:dotsindicator:4.2'
+
+    implementation 'com.eftimoff:android-viewpager-transformers:1.0.1@aar'
+
+    // Calendar View
+    implementation 'com.github.tizisdeepan:eventscalendar:1.6.1'
+}

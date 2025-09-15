@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".staff.activities.InviteStaffActivity">
+
+    <LinearLayout
+        android:id="@+id/typeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@drawable/outline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/typeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nameContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/farm_menu_bg"
+        app:layout_constraintStart_toStartOf="@id/typeContainer"
+        app:layout_constraintEnd_toEndOf="@id/typeContainer"
+        app:layout_constraintTop_toBottomOf="@id/typeContainer"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/green_farmx" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Name"
+            android:textColorHint="#808080"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:maxLength="50"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mobileContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/farm_menu_bg"
+        app:layout_constraintStart_toStartOf="@id/typeContainer"
+        app:layout_constraintEnd_toEndOf="@id/typeContainer"
+        app:layout_constraintTop_toBottomOf="@id/nameContainer"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:paddingHorizontal="1dp"
+            android:src="@drawable/ic_phone"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/green_farmx" />
+
+        <EditText
+            android:id="@+id/mobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Mobile Number"
+            android:textColorHint="#808080"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:maxLength="10"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/farm_menu_bg"
+        app:layout_constraintStart_toStartOf="@id/typeContainer"
+        app:layout_constraintEnd_toEndOf="@id/typeContainer"
+        app:layout_constraintTop_toBottomOf="@id/mobileContainer"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="1dp"
+            android:src="@drawable/ic_email"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/green_farmx" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="Email ID"
+            android:textColorHint="#808080"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/invite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/typeContainer"
+        app:layout_constraintEnd_toEndOf="@id/typeContainer"
+        app:layout_constraintTop_toBottomOf="@id/emailContainer"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:cornerRadius="20dp"
+        app:backgroundTint="@color/green_farmx"
+        android:text="Invite"
+        app:iconGravity="textStart"
+        app:iconSize="24dp"
+        android:textSize="16sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/payment_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/disc"
+                        android:fontFamily="@font/poppins_semibold" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/disc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="5dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/received"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.skydoves.elasticviews.ElasticLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <com.skydoves.elasticviews.ElasticFloatingActionButton
+                        android:id="@+id/accept_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/white"
+
+                        android:src="@drawable/ic_check_white_24dp"
+                        android:tint="@color/white"
+                        app:fabSize="mini" />
+
+                </com.skydoves.elasticviews.ElasticLayout>
+
+                <com.skydoves.elasticviews.ElasticLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start">
+
+
+                    <com.skydoves.elasticviews.ElasticFloatingActionButton
+                        android:id="@+id/edit_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:backgroundTint="@color/white"
+
+                        android:src="@drawable/ic_baseline_edit_24"
+                        android:tint="@color/white"
+                        app:fabSize="mini" />
+                </com.skydoves.elasticviews.ElasticLayout>
+
+                <com.skydoves.elasticviews.ElasticLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start">
+
+                    <com.skydoves.elasticviews.ElasticFloatingActionButton
+                        android:id="@+id/replicate_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:backgroundTint="@color/white"
+
+                        android:src="@drawable/copy"
+                        android:tint="@color/white"
+                        app:fabSize="mini" />
+                </com.skydoves.elasticviews.ElasticLayout>
+
+                <com.skydoves.elasticviews.ElasticLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start">
+
+                    <com.skydoves.elasticviews.ElasticFloatingActionButton
+                        android:id="@+id/delete_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:backgroundTint="@color/white"
+
+                        android:src="@drawable/ic_baseline_delete_sweep_24"
+                        android:tint="@color/white"
+                        app:fabSize="mini" />
+                </com.skydoves.elasticviews.ElasticLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

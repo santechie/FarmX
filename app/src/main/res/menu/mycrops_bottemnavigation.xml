@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_land"
+        android:icon="@drawable/land"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/land" />
+
+    <item
+        android:id="@+id/navigation_crop"
+        android:icon="@drawable/community"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/members" />
+
+    <item
+        android:id="@+id/navigation_rear"
+        android:icon="@drawable/rear"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/rearing" />
+
+    <item
+        android:id="@+id/navigation_finance"
+        android:icon="@drawable/crop"
+        android:iconTint="@color/app_colour_green"
+        android:title="@string/activity" />
+
+    <!--    <item-->
+    <!--        android:id="@+id/navigation_remainder"-->
+    <!--        android:iconTint="@color/app_colour_green"-->
+    <!--android:icon="@drawable/remainder"-->
+    <!--        android:title="@string/remainder" />-->
+
+
+</menu>
